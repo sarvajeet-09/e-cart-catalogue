@@ -1,0 +1,49 @@
+.main-card{
+    text-decoration: none;
+    background-color: #011a48;
+    color: #000 !important;
+    /* padding: 10px; */
+    border-radius: 10px;
+    box-shadow: rgba(112, 112, 112, 0.35) 0px 5px 8px !important;
+
+}
+.pro-card {
+    border-radius: 10px;
+    padding: 5px;
+   background-color: #fff;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.pro-card Link{
+    text-decoration: none;
+    width: 100%;
+}
+.pro-card h3{
+    font-size: 20px;
+    font-weight: 350;
+    text-align: center;
+    padding-top: 10px;
+}
+.pro-card .img{
+    transition: 0.5s ease-in-out;
+}
+.pro-card:hover .img{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.pro-card p{
+    text-align: center;
+    font-weight: 300;
+    margin-top: 5px;
+}
+.price-about{
+    display: flex;
+    justify-content: space-between;
+    background-color: #011a48;
+    padding: 8px;
+    border-radius: 10px;
+}
+.price-about button{
+    color: #ECB101 !important;
+    border: 1px solid #fff;
+}

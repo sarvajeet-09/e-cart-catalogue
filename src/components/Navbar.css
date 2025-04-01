@@ -1,0 +1,126 @@
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    background: linear-gradient( to right, #000000, #011a48);
+   
+  }
+.brand1{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.brand1 .brand-name{
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  margin-bottom: 0px !important;
+}
+  .brand .brand-name{
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 0px !important;
+  }
+
+ .search input{
+    padding: 10px 20px;
+    width: 100%;
+    border-radius:25px ;
+    background-color: #000000c5;
+    color: #fff;
+    border: 1px solid #fff ;
+  }
+  .nav-bar .search input:focus{
+    border: none !important;
+    box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px !important;
+  }
+  .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  hr{
+    margin: 0;
+    background-color: #fff;
+  }
+  .search span{
+    font-size: 20px;
+    color: #ecb101;
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .cart .btn{
+    padding: 10px 14px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #ecb101;
+  }
+.navbar-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background: linear-gradient( to right, #000000e4, #011a48);
+}
+.navbar-wrapper .items{
+  color: #fff;
+  /* color: #ecb101; */
+  cursor: pointer;
+}
+.navbar-wrapper .items:hover{
+  color: #ecb101;
+}
+
+
+/* responsive navbar start */
+.navbar-responsive{
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient( to right, #000000, #011a48);
+  display: none;
+}
+.navbar-responsive .combiner-div{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* responsive navbar end */
+@media(max-width:768px){
+  .navbar-responsive{
+    display: flex;
+  }
+  .nav-bar{
+    display: none;
+  }
+  .navbar-wrapper{
+    display: none;
+  }
+}
+@media(max-width:400px){
+  .navbar-responsive{
+    gap: 5px;
+  }
+}
+
+.dropdown:focus{
+  border: none !important;
+}
+.dropdown-menu{
+  margin: 0;
+  background: linear-gradient( to right, #000000, #011a48);
+}
+.dropdown-menu li a{
+  color: #fff;
+}
+.dropdown-menu li{
+  border-bottom: 1px solid #ecb101;
+}
