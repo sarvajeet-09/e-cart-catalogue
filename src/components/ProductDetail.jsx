@@ -4,8 +4,10 @@ import { items } from './Data'
 import './ProductDetail.css'
 import './Product.css'
 import Product from './Product'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/ReactToastify.css'
 
-const ProductDetail = ({setCart, cart}) => {
+const ProductDetail = ({setCart, cart}) => { 
   const { id } = useParams();
   const [product, setProduct] = useState([])
   const [related, setRelated] = useState([])
@@ -29,7 +31,47 @@ const ProductDetail = ({setCart, cart}) => {
 
 
 
+const addCart = (id,price,title,description,imgSrc) =>{
+   const newObj = {
+    id,price,title,description,imgSrc
+   }
 
+    const isItemInCart = cart.some((item) => item.id === newObj.id);
+           console.log(isItemInCart)
+           if (isItemInCart) {
+               toast.success(`item already exists in the cart`, {
+                   position: "top-right",
+                   autoClose: 1500,
+                   hideProgressBar: false,
+                   closeOnClick: false,
+                   pauseOnHover: true,
+                   draggable: true,
+                   progress: undefined,
+                   theme: "dark",
+               });
+   
+               return;
+           }
+   
+   
+           setCart([...cart, newObj])
+           console.log(cart)
+   
+   
+           toast.success(`item added to cart SucessFully`, {
+               position: "top-right",
+               autoClose: 1500,
+               hideProgressBar: false,
+               closeOnClick: false,
+               pauseOnHover: true,
+               draggable: true,
+               progress: undefined,
+               theme: "dark",
+   
+           });
+
+   setCart([...cart,newObj])
+}
 
 
 
@@ -56,7 +98,7 @@ const ProductDetail = ({setCart, cart}) => {
                 <h4> <i className="fa fa-indian-rupee-sign"></i> {product.price}</h4>
 
                 <div className="button-div">
-                  <button className="btn1">
+                  <button className="btn1" onClick={()=> addCart(product.id, product.price,product.title, product.description,product.imgSrc)}>
                     Add To Cart <i className="fa fa-cart-shopping"></i>
                   </button>
                   <button className="btn2">
